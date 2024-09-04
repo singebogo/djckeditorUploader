@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CKEditorTest</title>
+</head>
+<body>
+<div>
+    {% for obj in all %}
+        <hr>
+        <h2>第{{ forloop.counter }}篇：</h2>
+        <h2>标题：{{ obj.name }}</h2>
+        <h3>销量：{{ obj.sales }}</h3>
+        {{ obj.desc_pack | safe }}
+
+    {% endfor %}
+
+</div>
+</body>
+</html>
